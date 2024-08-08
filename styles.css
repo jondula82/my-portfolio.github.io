@@ -309,20 +309,19 @@ nav ul li a {
 }
 
 .contact-page {
-    max-width: 1800px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: auto;
 }
 
 .contact-page h2 {
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
-    margin: 0;
+    margin: 0%;
 }
 
 .contact-page h3 {
-    font-size: 4em;
-    margin-top: 0;
-    margin-bottom: 40px;
+    font-size: 5em;
+    margin: 0%;
 }
 
 .contact-columns {
@@ -445,33 +444,28 @@ footer .footers {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    footer .footers {
-        flex-direction: column;
-    }
-    
-    .footbutton {
-        margin-top: 1rem;
-    }
-    
-    .footbutton ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footbutton ul li {
-        margin: 0.5rem 0;
-    }
-}
-
-/* Media Queries for Responsiveness */
-
-/* Small Devices (Mobile Phones) */
-@media (max-width: 576px) {
     .container {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
     }
-
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    .headbutton {
+        margin-top: 1rem;
+    }
+    
+    .headbutton ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .headbutton ul li {
+        margin: 0.5rem 0;
+    }
+    
     #home h1 {
         font-size: 2.5em; /* Adjust font size for small screens */
     }
@@ -501,27 +495,78 @@ footer .footers {
     input, textarea {
         font-size: 0.9em; /* Smaller font size for inputs */
     }
+
+    footer .footers {
+        flex-direction: column;
+    }
+    
+    .footbutton {
+        margin-top: 1rem;
+    }
+    
+    .footbutton ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footbutton ul li {
+        margin: 0.5rem 0;
+    }
 }
 
-/* Medium Devices (Tablets) */
-@media (min-width: 577px) and (max-width: 768px) {
+/* Media Queries for Responsiveness */
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
     #home h1 {
-        font-size: 3em; /* Adjust font size for medium screens */
+        font-size: 4em; /* Adjust font size for small screens */
     }
 
     #home h2 {
-        font-size: 1.5em; /* Adjust subheading size for medium screens */
+        font-size: 2.5em; /* Adjust subheading size for small screens */
+    }
+
+    #home a {
+        flex-direction: column; 
+        align-items: center;
+        font-size: 2.5em;
+        margin: 0%;
+    }
+
+    #about img {
+        max-width: 100%;
+        margin: 0%;
+        align-items: center;
+    }
+
+    .myphoto {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Center align */
     }
 
     .service-columns, .portfolio-columns, .feedback-columns {
-        flex-direction: row; /* Row layout for medium screens */
-        justify-content: space-around; /* Space items */
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Center align */
+    }
+
+    .contact-columns {
+        flex-direction: column; /* Stack vertically on small screens */
     }
 
     .jobs, .portfolio-item, .testimony {
-        max-width: 45%; /* Limit width for medium screens */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    input, textarea {
+        font-size: 0.9em; /* Smaller font size for inputs */
     }
 }
+
 
 /* Large Devices (Desktops) */
 @media (min-width: 769px) {
